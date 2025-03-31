@@ -1,0 +1,6 @@
+***Giống nhau:
++CTDL động.
++các thao tác cơ bản ,thêm xóa cập nhật 1 cách linh hoạt
+***Khác nhau:
++Dữ liệu trên cây nhị phân tìm kiếm được tổ chức còn dslk đơn thì không.
++Chi phí tìm kiếm ,thêm cây nhanh hơn dslk đơn

@@ -1,0 +1,7 @@
+Duyệt cây theo phương pháp
+ LNR ta sẽ được các giá trị tăng
+ dần
+
+Duyệt cây theo phương pháp
+ RNL ta sẽ được các giá trị giảm
+ dần

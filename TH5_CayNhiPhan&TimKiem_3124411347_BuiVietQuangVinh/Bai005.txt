@@ -1,0 +1,10 @@
+//Hàm tính node con 
+int DemMotCon(Tree root)
+{
+    if(root==NULL) return 0;
+    //Kiểm tra nếu node có đúng 1 con 
+    //Kiểm tra điều kiện có con trái nhưng không có con phải hoặc có con phải nhưng không có con trái
+    if(root->left && ! root->right || ! root->left && root->right) 
+                return 1 + DemMotCon(root->left) + DemMotCon(root->right);
+    return DemMotCon(root->left) +DemMotCon(root->right);
+}

@@ -1,0 +1,22 @@
+int Xuat(char *filename,TREE t)
+ {
+
+ FILE*fp=fopen(filename,
+ ”wb”);
+ if(fp==NULL)
+ return 0;
+ NLR(t,fp);
+ fclose(fp);
+ return 1
+ }
+
+ void NLR(TREE t,FILE*fp)
+ {
+ if(t==NULL)
+ return;
+ fwrite(&t->info, 
+sizeof(float),1,fp);
+ NLR(t->pLeft,fp);
+ NLR(t->pRight,fp);
+ }
+ 

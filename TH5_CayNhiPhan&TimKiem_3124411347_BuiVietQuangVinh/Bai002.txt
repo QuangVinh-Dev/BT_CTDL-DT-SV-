@@ -1,0 +1,6 @@
+NODE *temp=p->pLeft;
+p->pLeft = p->pRight;
+p->pRight=temp;
+temp = p->pLeft->pLeft;
+p->pLeft->pLeft=p->pLeft->pRight;
+p->pLeft->pRight=temp; 

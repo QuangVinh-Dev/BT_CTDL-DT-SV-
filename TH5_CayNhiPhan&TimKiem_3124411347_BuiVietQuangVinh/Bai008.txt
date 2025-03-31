@@ -1,0 +1,19 @@
+*** Định nghĩa hàm
+int Xuat(chả *filename,Tree t)
+{
+    FILE*fp=fopen (filename,"wb");
+    if(fp==NULL) return 0;
+    NLR(t,fp);
+    fclose(fp);
+    return 1;
+}
+
+
+void LNR(Tree t,FILE *fp)
+{
+    if(t==NULL) return ;
+    LNR(t->pLeft,fp);
+    fwrite (&t->info,sizeof(float),1,fp);
+    NLR(t->pLeft,fp);
+    NLR(t->pRight,fp);
+}

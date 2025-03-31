@@ -1,0 +1,25 @@
+//// hàm tìm phần tử lớn nhất trong cây
+int TimMax(TREE t)
+{
+    // CÁCH TỐI ƯU NHẤT
+    // nếu node cha mà không tồn cây con phải - thì node cha này chính là node ngoài cùng nhất của cây con phải - cũng chính là node có giá trị lớn nhất
+    if (t->pRight == NULL)
+    {
+        return t->data;
+    }
+    return TimMax(t->pRight); // duyệt đến node cuối cùng nhất bên cây con phải ==> để tìm giá trị lớn nhất
+}
+
+
+
+//hàm tìm giá trị MIN
+int TimMin(TREE t)
+{
+    // CÁCH TỐI ƯU NHẤT
+    // nếu node cha mà không tồn cây con trái - thì node cha này chính là node ngoài cùng nhất của cây con trái - cũng chính là node có giá trị nhỏ nhất
+    if (t->pLeft == NULL)
+    {
+        return t->data;
+    }
+    return TimMin(t->pLeft); // duyệt đến node cuối cùng nhất bên cây con trái ==> để tìm giá trị nhỏ nhất
+}

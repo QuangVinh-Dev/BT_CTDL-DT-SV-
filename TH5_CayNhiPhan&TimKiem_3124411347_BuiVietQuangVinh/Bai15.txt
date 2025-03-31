@@ -1,0 +1,11 @@
+Giữa cấu trúc cây nhị phân tìm kiếm và cấu trúc
+mảng các phần tử được sắp thứ tự tăng dần có
+những điểm giống và khác nhau như thế nào.
+
+
+*** Giống nhau
+• Dữ liệu được tổ chức.
+• Chi phí tìm kiếm một phần tử trên cả hai ctdl là như nhau.
+*** Khác nhau
+• Chi phí thêm và xoá phần tử vào mảng lớn hơn chi phí cây nhị
+phân tìm kiếm.

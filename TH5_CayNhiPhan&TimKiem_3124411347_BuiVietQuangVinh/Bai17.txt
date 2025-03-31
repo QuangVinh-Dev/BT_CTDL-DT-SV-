@@ -1,0 +1,52 @@
+Hãy viết hàm tìm phần tử thay thế trong thao tác
+“Xoá một phần tử P có 2 con trong cây BST”, sử
+dụng nguyên tắc “tìm phần tử tận cùng bên trái
+của nhánh phải P”.
+
+***Tận cùng bên trái của nhánh phải
+
+11.void SearchStandFor(TREE&p,TREE&q)
+
+{
+if(q->pLeft)
+ SearchStandFor(p,q->pLeft); else
+ {
+         p->info=q->info;
+        p=q;
+        q=q->pRight;
+ }
+}
+
+
+Tận cùng bên trái của nhánh phải
+void SearchStandFor(TREE&p,
+TREE&q)
+
+{
+if(q->pLeft)
+SearchStandFor(p,q->pLeft);
+else
+{
+    p->info=q->info;
+    p=q;
+    q=q->pRight;
+}
+}
+
+
+Tận cùng bên phải của nhánh trái
+void SearchStandFor(TREE&p,
+TREE&q)
+
+{
+ if(q->pRight)
+ SearchStandFor(p,q->pRight);
+ else
+ {
+ p->info = q->info;
+ p = q;
+ q = q->pLeft;
+ }
+}
+
+

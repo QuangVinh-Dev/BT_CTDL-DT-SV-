@@ -1,0 +1,13 @@
+Vấn đề: Định nghĩa hàm thu hồi tất cả các bộ
+nhớ đã cấp phát cho cây nhị phân tìm kiếm
+các số nguyên.
+Định nghĩa hàm trừu tượng
+
+
+void RemoveAll(TREE &t){
+ if(t==NULL)
+ return;
+ RemoveAll(t->pLeft);
+ RemoveAll(t->pRight);
+ delete t;
+}

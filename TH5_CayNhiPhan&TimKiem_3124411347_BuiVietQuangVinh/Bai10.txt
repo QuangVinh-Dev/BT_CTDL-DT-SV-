@@ -1,0 +1,15 @@
+int Xuat(char *filename,Tree t)
+{
+    FILE*fp=fopen (filename,"wb");
+    if(fp==NULL) return 0;
+    NLR(t,fp);
+    fclose(fp);
+    return 1;
+}
+void LNR(Tree t,FILE*fp)
+{
+    if(t==NULL) return ;
+    LRN(t->pLeft,fp);
+    LRN(t->pRight,fp);
+    fwrite(&t->info,sizeof(float),1,fp);
+}
